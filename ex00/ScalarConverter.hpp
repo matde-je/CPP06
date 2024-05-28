@@ -7,7 +7,7 @@
 #include <cstdlib>
 #include <limits>
 #include <cmath>
-
+#include <cctype>
 //not instantiable (constructor private)
 
 class ScalarConverter

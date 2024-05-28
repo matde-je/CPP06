@@ -17,11 +17,22 @@ int main(int argc, char **argv)
         return  ;
     }
     int i = -1;
+    bool alpha = false;
+    bool digit = false;
     while (argv[1][++i])
     {
-        if ((argv[1][i] >= 0 && argv[1][i] <= 31) || argv[1][i] == 127)
+        if (!std::isprint(argv[1][i]) || argv[1][i] == 127)
         {
-            std::cout << "Non displayable characters in input not allowed\n";
+            std::cerr << "Non displayable characters in input not allowed\n";
+            return ;
+        }
+        if (std::isalpha(argv[1][i]) && argv[1][i] != 'f')
+            alpha = true;
+        if (std::isdigit(argv[1][i]))
+            digit = true;
+        if (alpha == true && digit == true)
+        {
+            std::cerr << "Mix of letters and numbers not valid\n";
             return ;
         }
     }
