@@ -8,6 +8,8 @@
 #include <limits>
 #include <cmath>
 #include <cctype>
+#include <cfloat>
+
 //not instantiable (constructor private)
 
 class ScalarConverter
@@ -15,6 +17,7 @@ class ScalarConverter
 
 	public:
 		static void convert(std::string literal);
+
 
 	private:
 		ScalarConverter();
@@ -24,4 +27,4 @@ class ScalarConverter
 
 };
 
-#endif /* ************************************************* SCALARCONVERTER_H */
+#endif

@@ -14,7 +14,7 @@ int main(int argc, char **argv)
     if (argc != 2)
     {
         std::cout << "Invalid number of arguments\n";
-        return  ;
+        return  1;
     }
     int i = -1;
     bool alpha = false;
@@ -24,7 +24,7 @@ int main(int argc, char **argv)
         if (!std::isprint(argv[1][i]) || argv[1][i] == 127)
         {
             std::cerr << "Non displayable characters in input not allowed\n";
-            return ;
+            return 1;
         }
         if (std::isalpha(argv[1][i]) && argv[1][i] != 'f')
             alpha = true;
@@ -33,7 +33,7 @@ int main(int argc, char **argv)
         if (alpha == true && digit == true)
         {
             std::cerr << "Mix of letters and numbers not valid\n";
-            return ;
+            return 1;
         }
     }
     ScalarConverter::convert(argv[1]);
