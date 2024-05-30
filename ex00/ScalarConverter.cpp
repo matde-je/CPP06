@@ -12,7 +12,6 @@ ScalarConverter &	ScalarConverter::operator=(ScalarConverter const & rhs) {
 	return *this; }
 
 
-
 void floating(std::string literal) {
 	try {
 		float value = atof(literal.c_str());
