@@ -2,7 +2,7 @@ CC = c++
 
 CFLAGS = -g -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp .cpp
+SRCS = main.cpp Base.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
